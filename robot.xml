@@ -1,0 +1,6 @@
+<launch>
+	<param name="robot_description" command="cat $(find exoskeleton)/arm.xml" />
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+	<node name="exoskeleton" pkg="exoskeleton" type="exoskeleton" />
+	<node name="rviz" pkg="rviz" type="rviz" />
+ </launch>
